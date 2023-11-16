@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/App.css';
 import React, {useState} from 'react';
+import todolist from './todolist';
 const App = () => {
   const [selectedShape, setSelectedShape] = useState("square");
   const [shapeList, setShapeList] = useState([]);
@@ -10,6 +11,7 @@ const App = () => {
 
   return (
     <div id="main">
+      <todolist />
       <div id="shape-creator">
         <select value={selectedShape} 
         onChange={(e) => setSelectedShape(e.target.value)}>
